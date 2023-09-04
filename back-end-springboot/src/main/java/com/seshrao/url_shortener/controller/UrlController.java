@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("url/shortner")
+@CrossOrigin(origins = "${cors.allowed-origins}")
 public class UrlController {
 
     @Autowired
