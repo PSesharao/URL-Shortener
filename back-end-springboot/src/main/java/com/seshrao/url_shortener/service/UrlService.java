@@ -6,6 +6,9 @@ import com.seshrao.url_shortener.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import static com.seshrao.url_shortener.logic.GenerateShortUrl.getShortUrl;
+import static com.seshrao.url_shortener.logic.GenerateShortUrl.isUrlValid;
+
 @Service
 public class UrlService {
 
@@ -17,6 +20,15 @@ public class UrlService {
     }
 
     public Url generateShortUrl(String url) {
-        return null ;
+        if(! isUrlValid(url)) {
+            System.out.println("URL is not valid");
+            return null;
+        }
+
+        Url urlObject = new Url();
+        urlObject.setOriginalurl(url);
+        urlObject.setShorturl(getShortUrl(url));
+
+        return urlRepository.save(urlObject);
     }
 }
