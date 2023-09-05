@@ -25,6 +25,7 @@ public class UrlService {
     @Cacheable(value = "urls", key = "#id")
     public String getOriginlUrl(String id) {
         logger.info("Retrieving url from  DB ");
+
         return urlRepository.findByShortUrl( id) ;
     }
 
