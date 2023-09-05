@@ -14,6 +14,53 @@ This URL Shortener App is a powerful tool for converting long URLs into short, e
 
 4. **Efficient Caching**: Employ Spring Redis Data for efficient caching of URL results. This cache reduces the load on the MS SQL server, where the short URL mappings are stored, resulting in improved performance and responsiveness.
 
+
+## Project Overview
+
+### Back end API responses
+
+1. Wikipedia Long URL
+
+![wiki_long_url](api-response/back-end-responses/wiki_long_url.png)
+
+2. Short URL generation
+
+![Short URL generation](api-response/back-end-responses/back-end-response-generate-short-url.png)
+
+3. Retrieve Long URL
+
+![Retrieve Long URL](api-response/back-end-responses/back-end-response-retrieve-long-url.png)
+
+4. Fake URL Validation
+
+![Fake URL Validation](api-response/back-end-responses/fake_url_validation.png)
+
+
+### Front end API responses
+
+1. Wikipedia Long URL to Short URL Generation
+
+![Wikipedia Long URL to Short URL Conversion](api-response/front-end-responses/valid_wiki_response.PNG)
+
+2. Short URL generation
+
+![Short URL generation](api-response/back-end-responses/back-end-response-generate-short-url.png)
+
+3. URL Redirection
+
+![URL Redirection](api-response/front-end-responses/url_redirection_1.png)
+
+4. URL Redirection
+
+![URL Redirection](api-response/front-end-responses/url_redirection_2.png)
+
+5. Fake URL Validation
+
+![Fake URL Validation](api-response/front-end-responses/invalid_url_validation.png)
+
+6. Server Down Validation
+![Server Down Validation](api-response/front-end-responses/server_down_valiation.png)
+
 ## Running the Application
 
 ### Spring Boot Backend
