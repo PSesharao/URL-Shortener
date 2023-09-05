@@ -5,7 +5,11 @@ import com.seshrao.url_shortener.exception.InvalidUrlException;
 import com.seshrao.url_shortener.model.Url;
 import com.seshrao.url_shortener.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static com.seshrao.url_shortener.logic.GenerateShortUrl.getShortUrl;
 import static com.seshrao.url_shortener.logic.GenerateShortUrl.isUrlValid;
@@ -16,7 +20,11 @@ public class UrlService {
     @Autowired
     private UrlRepository urlRepository;
 
+    private static final Logger logger = LoggerFactory.getLogger(UrlService.class);
+
+    @Cacheable(value = "urls", key = "#id")
     public String getOriginlUrl(String id) {
+        logger.info("Retrieving url from  DB ");
         return urlRepository.findByShortUrl( id) ;
     }
 
