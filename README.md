@@ -87,3 +87,11 @@ The Spring Boot application will start on port 8080.
     ```shell
     ng serve --port 4200
 The Angular application will be accessible at http://localhost:4200
+
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+Special thanks to CodeLogicByPrajyot
+Inspiration for this project came from system design concepts.
