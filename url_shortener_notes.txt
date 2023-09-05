@@ -25,3 +25,21 @@ ng new front-end-angular
 ng g c component/dashboard
 
 ng g s shared/urlShortener
+
+
+docker run -d -p 6379:6379 --name my-redis redis
+
+
+docker stop my-redis
+docker rm my-redis
+
+docker logs my-redis
+
+
+	
+docker run -p 6379:6379 --name my-redis redis
+
+
+
+
+
