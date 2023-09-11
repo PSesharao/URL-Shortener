@@ -12,7 +12,7 @@ This URL Shortener App is a powerful tool for converting long URLs into short, e
 
 3. **URL Validation**: Ensures the validity of user-provided URLs using the `org.apache.commons.validator.routines.UrlValidator` library, guaranteeing that only valid URLs are processed.
 
-4. **Efficient Caching**: Employ Spring Redis Data for efficient caching of URL results. This cache reduces the load on the MS SQL server, where the short URL mappings are stored, resulting in improved performance and responsiveness.
+4. **Efficient Caching**: Employ Spring Redis Data for efficient caching of URL results. This cache reduces the load on the My SQL server, where the short URL mappings are stored, resulting in improved performance and responsiveness.
 
 
 ## Project Overview
